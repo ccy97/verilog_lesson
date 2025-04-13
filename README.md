@@ -28,6 +28,9 @@ z: high impedence, floating state.
 
 # 20250413
 practice
-1. 4 bitripple carry counter.
+1. 4 bit ripple carry counter.
 2. SR latch.
 3. 4 to 1 mux.
+4. 4 bit full adder.
+5. delay.
+6. ripple carry counter.
