@@ -1,0 +1,97 @@
+#! /opt/homebrew/Cellar/icarus-verilog/12.0/bin/vvp
+:ivl_version "12.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/system.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_sys.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/vhdl_textio.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/v2005_math.vpi";
+:vpi_module "/opt/homebrew/Cellar/icarus-verilog/12.0/lib/ivl/va_math.vpi";
+S_0x147609b40 .scope module, "tb" "tb" 2 3;
+ .timescale -9 -9;
+v0x14761fd20_0 .var "clk", 0 0;
+v0x14761fe00_0 .var "d", 0 0;
+v0x14761fed0_0 .net "q_blocking", 0 0, v0x14761f680_0;  1 drivers
+v0x14761ff60_0 .net "q_nonblocking", 0 0, v0x14761fba0_0;  1 drivers
+S_0x147608890 .scope module, "u1" "blocking_ff" 2 9, 3 1 0, S_0x147609b40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "d";
+    .port_info 2 /OUTPUT 1 "q";
+v0x147609cb0_0 .net "clk", 0 0, v0x14761fd20_0;  1 drivers
+v0x14761f5e0_0 .net "d", 0 0, v0x14761fe00_0;  1 drivers
+v0x14761f680_0 .var "q", 0 0;
+v0x14761f730_0 .var "temp", 0 0;
+E_0x14760aa70 .event posedge, v0x147609cb0_0;
+S_0x14761f820 .scope module, "u2" "nonblocking_ff" 2 10, 4 1 0, S_0x147609b40;
+ .timescale 0 0;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 1 "d";
+    .port_info 2 /OUTPUT 1 "q";
+v0x14761fa40_0 .net "clk", 0 0, v0x14761fd20_0;  alias, 1 drivers
+v0x14761faf0_0 .net "d", 0 0, v0x14761fe00_0;  alias, 1 drivers
+v0x14761fba0_0 .var "q", 0 0;
+v0x14761fc50_0 .var "temp", 0 0;
+    .scope S_0x147608890;
+T_0 ;
+    %wait E_0x14760aa70;
+    %load/vec4 v0x14761f5e0_0;
+    %store/vec4 v0x14761f730_0, 0, 1;
+    %load/vec4 v0x14761f730_0;
+    %store/vec4 v0x14761f680_0, 0, 1;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x14761f820;
+T_1 ;
+    %wait E_0x14760aa70;
+    %load/vec4 v0x14761faf0_0;
+    %assign/vec4 v0x14761fc50_0, 0;
+    %load/vec4 v0x14761fc50_0;
+    %assign/vec4 v0x14761fba0_0, 0;
+    %jmp T_1;
+    .thread T_1;
+    .scope S_0x147609b40;
+T_2 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x14761fd20_0, 0, 1;
+    %end;
+    .thread T_2;
+    .scope S_0x147609b40;
+T_3 ;
+    %delay 5, 0;
+    %load/vec4 v0x14761fd20_0;
+    %inv;
+    %store/vec4 v0x14761fd20_0, 0, 1;
+    %jmp T_3;
+    .thread T_3;
+    .scope S_0x147609b40;
+T_4 ;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x14761fe00_0, 0, 1;
+    %delay 12, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x14761fe00_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x14761fe00_0, 0, 1;
+    %delay 10, 0;
+    %pushi/vec4 1, 0, 1;
+    %store/vec4 v0x14761fe00_0, 0, 1;
+    %delay 10, 0;
+    %vpi_call 2 22 "$finish" {0 0 0};
+    %end;
+    .thread T_4;
+    .scope S_0x147609b40;
+T_5 ;
+    %vpi_call 2 27 "$dumpfile", "blocking_vs_nonblocking.vcd" {0 0 0};
+    %vpi_call 2 28 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x147609b40 {0 0 0};
+    %vpi_call 2 29 "$monitor", "Time=%0t | d=%b | blocking=%b | nonblocking=%b", $time, v0x14761fe00_0, v0x14761fed0_0, v0x14761ff60_0 {0 0 0};
+    %end;
+    .thread T_5;
+# The file index is used to find the file name in the following table.
+:file_names 5;
+    "N/A";
+    "<interactive>";
+    "tb_assignment.v";
+    "blocking.v";
+    "nonblocking.v";

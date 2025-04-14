@@ -1,0 +1,78 @@
+$date
+	Mon Apr 14 19:04:19 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module tb $end
+$var wire 1 ! q_nonblocking $end
+$var wire 1 " q_blocking $end
+$var reg 1 # clk $end
+$var reg 1 $ d $end
+$scope module u1 $end
+$var wire 1 # clk $end
+$var wire 1 $ d $end
+$var reg 1 " q $end
+$var reg 1 % temp $end
+$upscope $end
+$scope module u2 $end
+$var wire 1 # clk $end
+$var wire 1 $ d $end
+$var reg 1 ! q $end
+$var reg 1 & temp $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+$end
+#0
+$dumpvars
+x&
+x%
+0$
+0#
+x"
+x!
+$end
+#5
+0&
+0"
+0%
+1#
+#10
+0#
+#12
+1$
+#15
+0!
+1&
+1"
+1%
+1#
+#20
+0#
+#22
+0$
+#25
+1!
+0&
+0"
+0%
+1#
+#30
+0#
+#32
+1$
+#35
+0!
+1&
+1"
+1%
+1#
+#40
+0#
+#42

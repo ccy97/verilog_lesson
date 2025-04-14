@@ -1,0 +1,297 @@
+$date
+	Mon Apr 14 19:44:34 2025
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ps
+$end
+$scope module traffic_signal_tb $end
+$var wire 2 ! hwy [1:0] $end
+$var wire 2 " cntry [1:0] $end
+$var reg 1 # clk $end
+$var reg 1 $ rst $end
+$var reg 1 % x $end
+$scope module uut $end
+$var wire 1 # clk $end
+$var wire 1 $ rst $end
+$var wire 1 % x $end
+$var parameter 2 & GREEN $end
+$var parameter 2 ' RED $end
+$var parameter 3 ( S0 $end
+$var parameter 3 ) S1 $end
+$var parameter 3 * S2 $end
+$var parameter 3 + S3 $end
+$var parameter 3 , S4 $end
+$var parameter 2 - YELLOW $end
+$var reg 2 . cntry [1:0] $end
+$var reg 2 / hwy [1:0] $end
+$var reg 3 0 next_state [2:0] $end
+$var reg 3 1 state [2:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+$comment Show the parameter values. $end
+$dumpall
+b1 -
+b100 ,
+b11 +
+b10 *
+b1 )
+b0 (
+b0 '
+b10 &
+$end
+#0
+$dumpvars
+b0 1
+b0 0
+b10 /
+b0 .
+0%
+1$
+0#
+b0 "
+b10 !
+$end
+#5000
+1#
+#10000
+0#
+#12000
+0$
+#15000
+1#
+#20000
+0#
+#25000
+1#
+#30000
+0#
+#35000
+1#
+#40000
+0#
+#45000
+1#
+#50000
+0#
+#55000
+1#
+#60000
+0#
+#62000
+b1 0
+1%
+#65000
+b10 0
+b1 !
+b1 /
+b1 1
+1#
+#70000
+0#
+#75000
+b11 0
+b0 !
+b0 /
+b10 1
+1#
+#80000
+0#
+#85000
+b100 0
+b10 "
+b10 .
+b0 !
+b0 /
+b11 1
+1#
+#90000
+0#
+#95000
+b0 0
+b1 "
+b1 .
+b0 !
+b0 /
+b100 1
+1#
+#100000
+0#
+#105000
+b1 0
+b0 "
+b0 .
+b10 !
+b10 /
+b0 1
+1#
+#110000
+0#
+#115000
+b10 0
+b1 !
+b1 /
+b1 1
+1#
+#120000
+0#
+#125000
+b11 0
+b0 !
+b0 /
+b10 1
+1#
+#130000
+0#
+#135000
+b100 0
+b10 "
+b10 .
+b0 !
+b0 /
+b11 1
+1#
+#140000
+0#
+#145000
+b0 0
+b1 "
+b1 .
+b0 !
+b0 /
+b100 1
+1#
+#150000
+0#
+#155000
+b1 0
+b0 "
+b0 .
+b10 !
+b10 /
+b0 1
+1#
+#160000
+0#
+#162000
+b0 0
+0%
+#165000
+1#
+#170000
+0#
+#175000
+1#
+#180000
+0#
+#185000
+1#
+#190000
+0#
+#195000
+1#
+#200000
+0#
+#205000
+1#
+#210000
+0#
+#215000
+1#
+#220000
+0#
+#225000
+1#
+#230000
+0#
+#235000
+1#
+#240000
+0#
+#245000
+1#
+#250000
+0#
+#255000
+1#
+#260000
+0#
+#262000
+b1 0
+1%
+#265000
+b10 0
+b1 !
+b1 /
+b1 1
+1#
+#270000
+0#
+#275000
+b11 0
+b0 !
+b0 /
+b10 1
+1#
+#280000
+0#
+#285000
+b100 0
+b10 "
+b10 .
+b0 !
+b0 /
+b11 1
+1#
+#290000
+0#
+#295000
+b0 0
+b1 "
+b1 .
+b0 !
+b0 /
+b100 1
+1#
+#300000
+0#
+#305000
+b1 0
+b0 "
+b0 .
+b10 !
+b10 /
+b0 1
+1#
+#310000
+0#
+#315000
+b10 0
+b1 !
+b1 /
+b1 1
+1#
+#320000
+0#
+#325000
+b11 0
+b0 !
+b0 /
+b10 1
+1#
+#330000
+0#
+#335000
+b100 0
+b10 "
+b10 .
+b0 !
+b0 /
+b11 1
+1#
+#340000
+0#
+#342000
